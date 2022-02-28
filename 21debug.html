@@ -1,0 +1,83 @@
+<script>
+ 
+ 
+ class InstructorAnimeCharacter{
+    constructor(name, homeTown, power, health, specialAttack, level){
+        this.name = name;
+        this.homeTown = homeTown;
+        this.power = power;
+        this.health = health;
+       // this.specialAttack = specialAttack;
+        this.level = level;
+    }
+
+    dodge(opponent,attack){
+    console.log(`${this.name} dodged ${opponent}s ${attack}`)
+}
+    kick(opponent){
+    opponent.health -= 20;
+    console.log(`John delivers a kick landing on ${opponent.name}: **** ${opponent.name}'s HEALTH: ${opponent.health}% ****`);
+}
+    
+    punch(opponent){
+        opponent.health -= 10;
+    console.log(` Punched! **** ${opponent.name}'s HEALTH: ${opponent.health}% ****`);
+    } runRandom(opponent){
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+        if(randomNumber <= 30){
+            // opponent.runRandom(this);
+        }else if(randomNumber > 30 && randomNumber <= 70){
+            this.kick(opponent);
+            // opponent.runRandom(this);
+        }else{
+            // opponent.runRandom(this);
+            this.punch(opponent);
+        }
+    }
+}
+let john = new InstructorAnimeCharacter("John","boredville","blast",100,"slash",100);
+console.log(john.name);
+
+
+    class StudenAnimeCharacter{
+    constructor(name,homeTown,power,health,specialAttack,level){
+    this.name = name;
+    this.homeTown = homeTown;
+    this.power = power;
+    this.health = health;
+    //this.specialAttack = specialAttack;
+    this.level = level;
+    }
+dodge(opponent,attack){
+    console.log(`${this.name} dodged ${opponent}s ${attack}`)
+}
+    punch(opponent){
+        opponent.health -=20
+        console.log(` ${this.name} throws a punch at ${opponent.name} 's HEALTH: ${opponent.health}% ****`);
+    }
+    chaos(){
+        opponent.health -= 10;
+        console.log(`Chaos Chaos! **** ${opponent.name} HEALTH: ${opponent.health}% ****`);
+    }runRandom(opponent){
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+        if(randomNumber <= 30){
+            
+        }else if(randomNumber > 30 && randomNumber <= 70){
+            this.chaos(opponent);
+        }else{
+            this.punch(opponent);
+        }
+    }
+    }
+    let kris = new StudenAnimeCharacter("kris","determination","90","ambitious");
+    let roundNum = 0;
+let interval = setInterval(function(){
+    roundNum++;
+    console.log(`round ${roundNum}`);
+    john.runRandom(kris);
+    kris.runRandom(john);
+    if(john.health <= 0  || john.health <= 0){
+        clearInterval(interval);
+    }
+ }, 3000);
+</script>

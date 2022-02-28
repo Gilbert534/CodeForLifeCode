@@ -1,0 +1,36 @@
+<html>
+    
+    <head>
+        <title>Methods and Functions</title>
+    </head>
+
+    <body>
+
+        <p> "Microsoft" with "Spotify"</p>
+        <button onclick="myFunction()"> Try it</button>
+
+        <p id="demo"> Now it says Microsoft!</p>
+
+        <script>
+
+            /*let x ="omvrieneriljgrnvoino"
+            x.length
+            console.log(x.length)
+
+            x.charAt(7)
+            console.log(x.charAt(7))
+
+            let writing = "This is a sentence"
+            let writing2 = writing.toUpperCase()
+            console.log(writing2)*/
+
+            function myFunction(){ // created a function
+                let text = document.getElementById("demo").innerHTML // Creating a var using the method getElementById the id "demo" turned into a var.          
+                document.getElementById("demo").innerHTML = text.replace("Microsoft" , "Spotify") // We use the getElementById  we used the method .replace to switch Microsoft to Spotify.
+            }
+
+        </script>
+
+    </body>
+
+</html>

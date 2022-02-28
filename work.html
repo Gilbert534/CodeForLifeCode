@@ -1,0 +1,45 @@
+<script>
+// check for bugs and tell me what kind of data type it is
+const cars = ["Saab", "Volvo", "BMW"]; // array
+let a = "words" // string
+let age = 15 // Integer
+const car = {type:"Fiat", model:"500", color:"white"}; // object
+(10 > 9) // boolean
+const person = {
+    firstName: "John",
+    lastName: "Doe",
+    fullName: function() {
+      return this.firstName + " " + this.lastName;
+    }
+  };  //explain this object function as best as you can
+        //you give firstName the value of John and give lastName the value of Doe. Then you create a function where when you run the code, you will be given the first name Doe with a space and then last name Doe: John Doe.
+
+      // code an example of a method using a string or number data type
+        let x = "abcdefghijkl"
+        let length = x.length
+        console.log(length)
+       
+      // code an example of a method with an object or array data type
+        const room = ["table", "computer", "chairs", "tv", "people"]
+        let last = room.pop()
+        console.log(last)
+
+      // write an example of a constructor
+        class AnimeCharacter{
+          constructor(name, age, power, home, level){
+            this.name = name;
+            this.age = age;
+            this.power = power;
+            this.home = home;
+            this.level = level;
+          }
+        }
+
+  // write practical code that can have visible changes on an html document(example setIntrevals and .replace)
+
+  setInterval(()=>{
+    document.body.style.backgroundColor = "red"
+  }, 2000)
+  // lastly update your github repo by using the Git add . , git commit -m"finshed todays assignment" and lastly git push.
+
+  </script>

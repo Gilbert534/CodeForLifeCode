@@ -1,0 +1,35 @@
+<html>
+
+<body>
+
+  <h1 id="demo"> At school I'm  always tired </h1>
+  <button onclick="myFunction()"> Click </button>  
+
+  
+
+
+
+<script>
+
+    
+
+function myFunction(){
+    setTimeout(() => {
+    let text = document.getElementById("demo").innerHTML;
+     document.getElementById("demo").innerHTML = text.replace("tired" , "bored")
+ 
+    }, 2000);
+}
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+
+</html>

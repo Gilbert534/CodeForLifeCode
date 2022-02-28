@@ -1,0 +1,47 @@
+<html>
+
+
+
+<button onclick="myFunction()"> Click </button>
+<button onclick="myWork()"> Click </button>
+<button onclick="myTired()"> Click </button>
+
+<p id="demo">  </p>
+
+<script>
+let text = document.getElementById("demo")
+
+function myFunction(){
+    if(text.value === "Bored"){
+        alert("no");
+    }
+    text.innerHTML = "Bored"
+    text.value = "Bored"
+}
+
+function myWork(){
+    if(text.value === "happy"){
+        alert("no");
+    }
+    text.innerHTML = "happy"
+    text.value = "happy"
+}
+
+function myTired(){
+    if(text.value === "Tired"){
+        alert("no");
+    }
+    text.innerHTML = "Tired"
+    text.value = "Tired"
+}
+
+
+    
+
+</script>
+
+
+
+
+
+</html>

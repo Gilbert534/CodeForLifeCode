@@ -1,0 +1,39 @@
+<html>
+<body>
+<h2> JavaScript if .. else</h2>
+
+<p> A time-based greeting</p>
+
+<p id="demo1"></p>
+<script>
+//warmup
+       // function myFunction(){ 
+   // document.getElementById("Change").style.backgroundColor = "lightBlue" // looks for the Id in the body tag. Then when you click on the button the whole background color will change to red
+      // }
+//warmup
+// part 2
+const time = new Date().getHours(); // The const is time and inside we new Date() single moment of time. .getHours(); returns hour for specific day based on specific time.
+let greeting; //created an empty variable to be filled later. 
+if (time <10) { 
+    greeting = "Good morning" // var greeting equals good morning
+}
+else if (time < 20) {
+    greeting = "Good day" // else if time <20 is going to be good day
+}
+else {
+    greeting = "Good evening"  // if it doesn't say good morning or good day, then it's going to say good evening
+}
+document.getElementById("demo1").innerHTML = greeting;
+
+//
+let feeling = "bored"
+
+if (feeling === "bored"){
+    console.log("Go do something that's not boring")
+}
+else if (feeling === "tired"){
+    console.log("Go to sleep")
+}
+</script>
+</body>
+</html>

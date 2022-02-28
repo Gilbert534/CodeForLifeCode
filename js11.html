@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title> Short Monday schedule </title>
+    </head>
+<div align="center">
+    <body>
+
+        <h1 id="time"> </h1>
+
+        <h2 id="demo"> Here is our time based work </h2>
+
+<button onclick="myFunction()"> Press </button>
+
+<button onclick="hisFunction()"> Click</button>
+
+
+        
+        <script>
+            //warmup
+            /*let birthday ="My birthday"
+
+            if(birthday === "My birthday"){
+                console.log("I like to have a small party with my family. For my birthday, I want a gaming PC for my birthday.")
+            }
+            else if(birthday === "Franko's birthday"){
+                console.log("Franko likes to spend time with his friends. For his birthday, he wants a cat.")
+            }
+            */
+            //else
+              //  console.log("Someone else's birthday")
+
+             //warmup 
+
+const time = new Date().getHours(); 
+let greeting; 
+if (time <=6) { 
+    greeting ="I usually wake up before 6 or exactly at 6." 
+}
+else if (time <= 14) {
+    greeting = "I get out of school at 1:30"
+}
+else {
+    greeting = "I go to bed at 10"
+}
+document.getElementById("time").innerHTML = greeting;
+
+function myFunction(){
+setTimeout(()=>{
+    alert("Based on the time, you will get a different text")
+}, 2000)
+}
+
+function hisFunction(){
+setInterval(()=>{
+    let text = document.getElementById("demo").innerHTML
+    document.getElementById("demo").innerHTML = text.replace("Here is our time based work", "Depending on the time, it will display a certain message")
+},3000)
+}
+
+setInterval(()=>{
+    document.body.style.backgroundColor="cadetBlue"
+},500)
+
+setInterval(()=>{
+    document.body.style.backgroundColor="lightBlue"
+},1000)
+
+
+setInterval(()=>{
+    document.body.style.backgroundColor="skyBlue"
+},1500)
+
+
+        </script>
+
+<link rel="stylesheet" a href="js11.css">
+
+    
+    </body>
+</div>
+
+</html>
